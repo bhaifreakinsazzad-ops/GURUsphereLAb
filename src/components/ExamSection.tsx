@@ -109,7 +109,17 @@ const ExamSection = () => {
                 </div>
               </div>
             </div>
-          </ScrollReveal>
+
+            <Link
+              to="/exam-arena"
+              className="mt-6 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97]"
+              style={{
+                background: "hsl(var(--pathshala-gold))",
+                color: "hsl(var(--pathshala-deep))",
+              }}
+            >
+              Enter the Arena <ChevronRight size={16} />
+            </Link>
         </div>
       </div>
     </section>
