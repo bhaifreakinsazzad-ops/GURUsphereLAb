@@ -27,7 +27,7 @@ const features = [
     icon: Brain,
     title: "Thought Map",
     bengali: "চিন্তার মানচিত্র",
-    description: "Visualize connections between everything you've learned. See how mathematics links to music, how history shapes science. Knowledge isn't linear — neither is Pathshala.",
+    description: "Visualize connections between everything you've learned. See how mathematics links to music, how history shapes science. Knowledge isn't linear — neither is GURU'sphere Lab.",
     color: "hsl(340 60% 55%)",
   },
 ];
