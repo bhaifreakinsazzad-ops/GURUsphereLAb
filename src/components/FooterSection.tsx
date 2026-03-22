@@ -35,7 +35,7 @@ const FooterSection = () => {
                 color: "hsl(var(--pathshala-deep))",
               }}
             >
-              Join Pathshala
+              Join GURU'sphere Lab
             </button>
           </div>
         </ScrollReveal>
