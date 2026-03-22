@@ -35,7 +35,7 @@ const FooterSection = () => {
                 color: "hsl(var(--pathshala-deep))",
               }}
             >
-              Join Pathshala
+              Join GURU'sphere Lab
             </button>
           </div>
         </ScrollReveal>
@@ -43,8 +43,8 @@ const FooterSection = () => {
         <ScrollReveal delay={0.3}>
           <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <span className="text-xl font-bold text-gradient-gold">পাঠশালা</span>
-              <span className="text-xs" style={{ color: "hsl(162 20% 45%)" }}>PATHSHALA</span>
+              <span className="text-xl font-bold text-gradient-gold">GURU'sphere</span>
+              <span className="text-xs" style={{ color: "hsl(162 20% 45%)" }}>LAB</span>
             </div>
             <p className="text-xs" style={{ color: "hsl(162 15% 40%)" }}>
               Made with ❤️ in Bangladesh, for the world.

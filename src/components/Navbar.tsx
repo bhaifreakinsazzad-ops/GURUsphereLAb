@@ -18,8 +18,8 @@ const Navbar = () => {
       <div className="mx-auto max-w-7xl section-padding py-4">
         <div className="glass-card rounded-2xl px-6 py-3 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-gradient-green">পাঠশালা</span>
-            <span className="text-sm font-medium text-muted-foreground tracking-wide">PATHSHALA</span>
+            <span className="text-2xl font-bold text-gradient-green">GURU'sphere</span>
+            <span className="text-sm font-medium text-muted-foreground tracking-wide">LAB</span>
           </a>
 
           {/* Desktop */}
