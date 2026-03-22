@@ -1,6 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 import { motion } from "framer-motion";
-import { Trophy, Award, BarChart3, FileCheck2 } from "lucide-react";
+import { Trophy, Award, BarChart3, FileCheck2, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const leaderboard = [
   { rank: 1, name: "Rafiq Hasan", score: 2847, badge: "🥇" },
@@ -107,6 +108,21 @@ const ExamSection = () => {
                   <p className="text-xs text-muted-foreground mt-1">Adaptive difficulty</p>
                 </div>
               </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.3}>
+            <div className="text-center mt-10">
+              <Link
+                to="/exam-arena"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97]"
+                style={{
+                  background: "hsl(var(--pathshala-gold))",
+                  color: "hsl(var(--pathshala-deep))",
+                }}
+              >
+                Enter the Arena <ChevronRight size={16} />
+              </Link>
             </div>
           </ScrollReveal>
         </div>
