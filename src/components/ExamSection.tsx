@@ -1,6 +1,7 @@
 import ScrollReveal from "./ScrollReveal";
 import { motion } from "framer-motion";
-import { Trophy, Award, BarChart3, FileCheck2 } from "lucide-react";
+import { Trophy, Award, BarChart3, FileCheck2, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const leaderboard = [
   { rank: 1, name: "Rafiq Hasan", score: 2847, badge: "🥇" },
