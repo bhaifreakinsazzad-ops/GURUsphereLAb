@@ -112,7 +112,7 @@ const ExamSection = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <div className="text-center mt-10">
+            <div className="flex flex-wrap justify-center gap-4 mt-10">
               <Link
                 to="/exam-arena"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97]"
@@ -122,6 +122,16 @@ const ExamSection = () => {
                 }}
               >
                 Enter the Arena <ChevronRight size={16} />
+              </Link>
+              <Link
+                to="/hadi-meter"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97] border-2"
+                style={{
+                  borderColor: "hsl(var(--pathshala-green))",
+                  color: "hsl(var(--pathshala-green))",
+                }}
+              >
+                ⚖️ The Hadi Meter <ChevronRight size={16} />
               </Link>
             </div>
           </ScrollReveal>
