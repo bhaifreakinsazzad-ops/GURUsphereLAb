@@ -45,24 +45,72 @@ const LEADERBOARD = [
   { rank: 10, name: "Jubayer Hossain", score: 1890, tier: "Tree", streak: 7 },
 ];
 
-/* ─── Sample Questions ─── */
-const SAMPLE_QUESTIONS = [
-  {
-    q: "What is the derivative of x³?",
-    options: ["3x", "x²", "3x²", "2x³"],
-    correct: 2,
-  },
-  {
-    q: "Which river is the longest in Bangladesh?",
-    options: ["Padma", "Meghna", "Jamuna", "Surma"],
-    correct: 1,
-  },
-  {
-    q: "'To be or not to be' — who wrote this?",
-    options: ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"],
-    correct: 1,
-  },
-];
+/* ─── Question Bank by Category ─── */
+const QUESTION_BANK: Record<string, { q: string; options: string[]; correct: number }[]> = {
+  math: [
+    { q: "What is the derivative of x³?", options: ["3x", "x²", "3x²", "2x³"], correct: 2 },
+    { q: "What is 15% of 200?", options: ["20", "25", "30", "35"], correct: 2 },
+    { q: "Solve: 2x + 5 = 17", options: ["x = 4", "x = 5", "x = 6", "x = 7"], correct: 2 },
+    { q: "What is the area of a circle with radius 7? (π ≈ 22/7)", options: ["144", "154", "164", "174"], correct: 1 },
+    { q: "What is √144?", options: ["10", "11", "12", "14"], correct: 2 },
+  ],
+  science: [
+    { q: "What gas do plants absorb from the atmosphere?", options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"], correct: 2 },
+    { q: "What is the chemical symbol for water?", options: ["HO", "H₂O", "OH₂", "H₃O"], correct: 1 },
+    { q: "Which planet is closest to the Sun?", options: ["Venus", "Earth", "Mercury", "Mars"], correct: 2 },
+    { q: "What is the powerhouse of the cell?", options: ["Nucleus", "Ribosome", "Mitochondria", "Golgi Body"], correct: 2 },
+    { q: "Speed of light is approximately?", options: ["3×10⁶ m/s", "3×10⁸ m/s", "3×10¹⁰ m/s", "3×10⁴ m/s"], correct: 1 },
+  ],
+  english: [
+    { q: "'To be or not to be' — who wrote this?", options: ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"], correct: 1 },
+    { q: "What is the past tense of 'go'?", options: ["Goed", "Gone", "Went", "Going"], correct: 2 },
+    { q: "Which is a synonym of 'brave'?", options: ["Timid", "Courageous", "Lazy", "Angry"], correct: 1 },
+    { q: "Identify the noun: 'The cat sat on the mat.'", options: ["sat", "on", "the", "cat"], correct: 3 },
+    { q: "'Break a leg' means?", options: ["Get injured", "Good luck", "Run fast", "Be careful"], correct: 1 },
+  ],
+  bangla: [
+    { q: "বাংলা ভাষার উৎপত্তি কোন ভাষা থেকে?", options: ["সংস্কৃত", "পালি", "প্রাকৃত", "মাগধী প্রাকৃত"], correct: 3 },
+    { q: "'সোনার তরী' কবিতার রচয়িতা কে?", options: ["কাজী নজরুল ইসলাম", "রবীন্দ্রনাথ ঠাকুর", "জীবনানন্দ দাশ", "মাইকেল মধুসূদন দত্ত"], correct: 1 },
+    { q: "বাংলা বর্ণমালায় মোট বর্ণ কয়টি?", options: ["৪৭", "৪৯", "৫০", "৫২"], correct: 2 },
+    { q: "'অভিধান' শব্দের অর্থ কী?", options: ["গল্পের বই", "শব্দকোষ", "ব্যাকরণ", "ছড়ার বই"], correct: 1 },
+    { q: "কোনটি যুক্তবর্ণ?", options: ["ক", "খ", "ক্ষ", "গ"], correct: 2 },
+  ],
+  coding: [
+    { q: "What does HTML stand for?", options: ["Hyper Text Markup Language", "High Tech Modern Language", "Hyper Transfer Markup Language", "Home Tool Markup Language"], correct: 0 },
+    { q: "Which keyword declares a variable in JavaScript?", options: ["var", "int", "string", "define"], correct: 0 },
+    { q: "What does CSS stand for?", options: ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"], correct: 1 },
+    { q: "Which symbol is used for comments in Python?", options: ["//", "/* */", "#", "--"], correct: 2 },
+    { q: "What is the output of: print(2 ** 3)?", options: ["6", "8", "5", "9"], correct: 1 },
+  ],
+  gk: [
+    { q: "Which river is the longest in Bangladesh?", options: ["Padma", "Meghna", "Jamuna", "Surma"], correct: 1 },
+    { q: "What is the capital of Japan?", options: ["Beijing", "Seoul", "Tokyo", "Bangkok"], correct: 2 },
+    { q: "Who is known as the Father of the Nation of Bangladesh?", options: ["Zia ur Rahman", "Bangabandhu Sheikh Mujibur Rahman", "A.K. Fazlul Huq", "Maulana Bhashani"], correct: 1 },
+    { q: "Which is the largest ocean?", options: ["Atlantic", "Indian", "Arctic", "Pacific"], correct: 3 },
+    { q: "International Mother Language Day is observed on?", options: ["21 March", "21 February", "26 March", "16 December"], correct: 1 },
+  ],
+  history: [
+    { q: "When did Bangladesh gain independence?", options: ["1947", "1952", "1971", "1975"], correct: 2 },
+    { q: "Who discovered America?", options: ["Vasco da Gama", "Christopher Columbus", "Ferdinand Magellan", "Marco Polo"], correct: 1 },
+    { q: "The Language Movement of Bangladesh took place in?", options: ["1947", "1952", "1966", "1971"], correct: 1 },
+    { q: "World War II ended in?", options: ["1942", "1943", "1944", "1945"], correct: 3 },
+    { q: "The Mughal Empire was founded by?", options: ["Akbar", "Babur", "Shah Jahan", "Aurangzeb"], correct: 1 },
+  ],
+  art: [
+    { q: "Who painted the Mona Lisa?", options: ["Michelangelo", "Leonardo da Vinci", "Raphael", "Van Gogh"], correct: 1 },
+    { q: "How many strings does a standard guitar have?", options: ["4", "5", "6", "8"], correct: 2 },
+    { q: "Which instrument has 88 keys?", options: ["Guitar", "Violin", "Piano", "Flute"], correct: 2 },
+    { q: "Rabindra Sangeet was composed by?", options: ["Kazi Nazrul Islam", "Rabindranath Tagore", "Lalon Shah", "Hason Raja"], correct: 1 },
+    { q: "What are the three primary colors?", options: ["Red, Green, Blue", "Red, Yellow, Blue", "Red, Orange, Purple", "Blue, Green, Yellow"], correct: 1 },
+  ],
+};
+
+/* Helper to get questions for a category */
+function getQuestionsForCategory(catId: string) {
+  return QUESTION_BANK[catId] || QUESTION_BANK.gk;
+}
+
+const SAMPLE_QUESTIONS_FALLBACK = QUESTION_BANK.gk;
 
 function getRank(score: number) {
   return RANKS.find((r) => score >= r.min && score <= r.max) || RANKS[0];
