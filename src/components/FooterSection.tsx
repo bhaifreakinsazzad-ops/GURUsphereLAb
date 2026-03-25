@@ -1,6 +1,26 @@
+import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
+import { toast } from "@/hooks/use-toast";
 
 const FooterSection = () => {
+  const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleJoin = (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = email.trim();
+    if (!trimmed || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
+      toast({ title: "অবৈধ ইমেইল", description: "দয়া করে একটি সঠিক ইমেইল দিন।", variant: "destructive" });
+      return;
+    }
+    setSubmitting(true);
+    setTimeout(() => {
+      toast({ title: "ধন্যবাদ! 🎉", description: "আপনাকে শীঘ্রই জানানো হবে।" });
+      setEmail("");
+      setSubmitting(false);
+    }, 600);
+  };
+
   return (
     <footer id="join" className="py-24 md:py-32 section-padding relative overflow-hidden">
       <div className="absolute inset-0 hero-gradient opacity-95" />
@@ -21,23 +41,27 @@ const FooterSection = () => {
             No fees. No barriers. Just knowledge, freely given.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <form onSubmit={handleJoin} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               className="flex-1 px-5 py-4 rounded-xl bg-white/10 border border-white/10 text-sm placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-pathshala-gold/50 transition-shadow"
               style={{ color: "hsl(var(--primary-foreground))" }}
             />
             <button
-              className="px-8 py-4 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97] shrink-0"
+              type="submit"
+              disabled={submitting}
+              className="px-8 py-4 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97] shrink-0 disabled:opacity-60"
               style={{
                 background: "hsl(var(--pathshala-gold))",
                 color: "hsl(var(--pathshala-deep))",
               }}
             >
-              Join GURU'sphere Lab
+              {submitting ? "Joining..." : "Join GURU'sphere Lab"}
             </button>
-          </div>
+          </form>
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
