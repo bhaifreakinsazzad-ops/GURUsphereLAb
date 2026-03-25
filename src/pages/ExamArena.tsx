@@ -127,6 +127,8 @@ const ExamArena = () => {
   const [score, setScore] = useState(0);
   const [answered, setAnswered] = useState(0);
 
+  const questions = selectedCategory ? getQuestionsForCategory(selectedCategory) : SAMPLE_QUESTIONS_FALLBACK;
+
   const startExam = (catId: string) => {
     setSelectedCategory(catId);
     setActiveView("exam");
