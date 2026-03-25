@@ -144,13 +144,13 @@ const ExamArena = () => {
     setSelectedAnswer(idx);
     setShowResult(true);
     setAnswered((p) => p + 1);
-    if (idx === SAMPLE_QUESTIONS[currentQ].correct) {
+    if (idx === questions[currentQ].correct) {
       setScore((p) => p + 1);
     }
   };
 
   const nextQuestion = () => {
-    if (currentQ < SAMPLE_QUESTIONS.length - 1) {
+    if (currentQ < questions.length - 1) {
       setCurrentQ((p) => p + 1);
       setSelectedAnswer(null);
       setShowResult(false);
@@ -507,7 +507,7 @@ const ExamArena = () => {
                 </button>
                 <div className="flex items-center gap-4 text-sm">
                   <span className="text-muted-foreground tabular-nums">
-                    {currentQ + 1}/{SAMPLE_QUESTIONS.length}
+                    {currentQ + 1}/{questions.length}
                   </span>
                   <span className="flex items-center gap-1.5 font-semibold text-pathshala-gold tabular-nums">
                     <Zap size={14} /> {score * 50} XP
@@ -521,7 +521,7 @@ const ExamArena = () => {
                   className="h-full rounded-full"
                   style={{ background: "hsl(var(--pathshala-gold))" }}
                   initial={{ width: 0 }}
-                  animate={{ width: `${((currentQ + 1) / SAMPLE_QUESTIONS.length) * 100}%` }}
+                  animate={{ width: `${((currentQ + 1) / questions.length) * 100}%` }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 />
               </div>
@@ -536,12 +536,12 @@ const ExamArena = () => {
                   transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <h2 className="text-xl md:text-2xl font-bold text-foreground mb-8 leading-snug">
-                    {SAMPLE_QUESTIONS[currentQ].q}
+                    {questions[currentQ].q}
                   </h2>
 
                   <div className="space-y-3">
-                    {SAMPLE_QUESTIONS[currentQ].options.map((opt, idx) => {
-                      const isCorrect = idx === SAMPLE_QUESTIONS[currentQ].correct;
+                    {questions[currentQ].options.map((opt, idx) => {
+                      const isCorrect = idx === questions[currentQ].correct;
                       const isSelected = idx === selectedAnswer;
                       let optionStyle = "border-border/60 hover:border-pathshala-green-light/50 hover:bg-muted/40";
 
@@ -588,7 +588,7 @@ const ExamArena = () => {
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       className="mt-8"
                     >
-                      {selectedAnswer === SAMPLE_QUESTIONS[currentQ].correct ? (
+                      {selectedAnswer === questions[currentQ].correct ? (
                         <div className="flex items-center gap-3 p-4 rounded-xl bg-pathshala-emerald/10 border border-pathshala-emerald/20">
                           <div className="w-8 h-8 rounded-full bg-pathshala-emerald/20 flex items-center justify-center">
                             <Zap size={16} className="text-pathshala-emerald" />
@@ -606,13 +606,13 @@ const ExamArena = () => {
                           <div>
                             <p className="font-semibold text-sm text-foreground">Wrong answer</p>
                             <p className="text-xs text-muted-foreground">
-                              Correct: {SAMPLE_QUESTIONS[currentQ].options[SAMPLE_QUESTIONS[currentQ].correct]}
+                              Correct: {questions[currentQ].options[questions[currentQ].correct]}
                             </p>
                           </div>
                         </div>
                       )}
 
-                      {currentQ < SAMPLE_QUESTIONS.length - 1 ? (
+                      {currentQ < questions.length - 1 ? (
                         <button
                           onClick={nextQuestion}
                           className="mt-4 w-full py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97]"
@@ -629,7 +629,7 @@ const ExamArena = () => {
                             <Trophy size={36} className="mx-auto mb-3 text-pathshala-gold" />
                             <h3 className="text-xl font-bold text-foreground mb-1">Exam Complete</h3>
                             <p className="text-3xl font-bold text-gradient-gold tabular-nums mb-1">
-                              {score}/{SAMPLE_QUESTIONS.length}
+                              {score}/{questions.length}
                             </p>
                             <p className="text-sm text-muted-foreground mb-4">
                               You earned <strong className="text-pathshala-gold">{score * 50} XP</strong>
