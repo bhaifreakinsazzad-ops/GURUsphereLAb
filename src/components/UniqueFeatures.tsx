@@ -6,7 +6,7 @@ const features = [
     icon: Zap,
     title: "Daily Spark",
     bengali: "প্রতিদিনের আলো",
-    description: "Every day, a 5-minute micro-lesson appears — a surprising fact, a thought experiment, a challenge. No two days are the same. Learning finds you.",
+    description: "Every day, a 5-minute micro-lesson drops — a mind-bending fact, a thought experiment, a challenge. No two days are the same. Learning finds you.",
     color: "hsl(var(--pathshala-gold))",
   },
   {
