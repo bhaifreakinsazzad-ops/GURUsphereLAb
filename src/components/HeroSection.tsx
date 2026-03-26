@@ -70,8 +70,8 @@ const HeroSection = () => {
           className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{ color: "hsl(162 30% 70%)" }}
         >
-          Free, world-class education rooted in Bangladesh, designed for every curious mind on Earth. 
-          Live classrooms, infinite library, and a learning experience like nothing before.
+          Free, world-class education for every curious mind. 
+          Live classrooms, an infinite library, and a learning experience that makes you wonder why school was ever boring.
         </motion.p>
 
         <motion.div
