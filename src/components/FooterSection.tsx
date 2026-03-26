@@ -15,7 +15,7 @@ const FooterSection = () => {
     }
     setSubmitting(true);
     setTimeout(() => {
-      toast({ title: "ধন্যবাদ! 🎉", description: "আপনাকে শীঘ্রই জানানো হবে।" });
+      toast({ title: "You're in! 🎉", description: "We'll notify you when we launch." });
       setEmail("");
       setSubmitting(false);
     }, 600);
