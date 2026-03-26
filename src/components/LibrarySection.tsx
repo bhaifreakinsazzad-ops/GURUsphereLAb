@@ -4,12 +4,12 @@ import ScrollReveal from "./ScrollReveal";
 import { BookOpen, Headphones, Bookmark, Search } from "lucide-react";
 
 const books = [
-  { title: "আমার দেশ", author: "Humayun Ahmed", category: "Literature", pages: 248 },
   { title: "Physics of the Impossible", author: "Michio Kaku", category: "Science", pages: 352 },
-  { title: "The Art of Thinking Clearly", author: "Rolf Dobelli", category: "Self-help", pages: 384 },
-  { title: "গণিতের রঙ্গে", author: "Muhammad Zafar Iqbal", category: "Mathematics", pages: 156 },
   { title: "Sapiens", author: "Yuval Harari", category: "History", pages: 443 },
-  { title: "ফেলুদা সমগ্র", author: "Satyajit Ray", category: "Fiction", pages: 520 },
+  { title: "The Art of Thinking Clearly", author: "Rolf Dobelli", category: "Self-help", pages: 384 },
+  { title: "Thinking, Fast and Slow", author: "Daniel Kahneman", category: "Psychology", pages: 499 },
+  { title: "আমার দেশ", author: "Humayun Ahmed", category: "Literature", pages: 248 },
+  { title: "A Short History of Nearly Everything", author: "Bill Bryson", category: "Science", pages: 544 },
 ];
 
 const LibrarySection = () => {
