@@ -6,14 +6,14 @@ const features = [
     icon: Zap,
     title: "Daily Spark",
     bengali: "প্রতিদিনের আলো",
-    description: "Every day, a 5-minute micro-lesson appears — a surprising fact, a thought experiment, a challenge. No two days are the same. Learning finds you.",
+    description: "Every day, a 5-minute micro-lesson drops — a mind-bending fact, a thought experiment, a challenge. No two days are the same. Learning finds you.",
     color: "hsl(var(--pathshala-gold))",
   },
   {
     icon: Users2,
     title: "Peer Circle",
     bengali: "সহপাঠী বৃত্ত",
-    description: "Get matched with 4 learners at your level. Study together, challenge each other, grow as a unit. Your circle becomes your strength.",
+    description: "Get matched with 4 learners at your level from anywhere in the world. Study together, challenge each other, grow as a unit.",
     color: "hsl(var(--pathshala-green))",
   },
   {

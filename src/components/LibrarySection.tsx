@@ -4,12 +4,12 @@ import ScrollReveal from "./ScrollReveal";
 import { BookOpen, Headphones, Bookmark, Search } from "lucide-react";
 
 const books = [
-  { title: "আমার দেশ", author: "Humayun Ahmed", category: "Literature", pages: 248 },
   { title: "Physics of the Impossible", author: "Michio Kaku", category: "Science", pages: 352 },
-  { title: "The Art of Thinking Clearly", author: "Rolf Dobelli", category: "Self-help", pages: 384 },
-  { title: "গণিতের রঙ্গে", author: "Muhammad Zafar Iqbal", category: "Mathematics", pages: 156 },
   { title: "Sapiens", author: "Yuval Harari", category: "History", pages: 443 },
-  { title: "ফেলুদা সমগ্র", author: "Satyajit Ray", category: "Fiction", pages: 520 },
+  { title: "The Art of Thinking Clearly", author: "Rolf Dobelli", category: "Self-help", pages: 384 },
+  { title: "Thinking, Fast and Slow", author: "Daniel Kahneman", category: "Psychology", pages: 499 },
+  { title: "আমার দেশ", author: "Humayun Ahmed", category: "Literature", pages: 248 },
+  { title: "A Short History of Nearly Everything", author: "Bill Bryson", category: "Science", pages: 544 },
 ];
 
 const LibrarySection = () => {
@@ -35,8 +35,8 @@ const LibrarySection = () => {
               <span className="text-gradient-gold">breathe.</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
-              Every book is alive here — listen, read, annotate, and discuss. 
-              Our library grows with you. Infinite shelves, zero cost.
+              Every book is alive here — listen, read, annotate, and discuss.
+              Your library grows with you. Infinite shelves, zero cost, zero ads.
             </p>
           </div>
         </ScrollReveal>
@@ -143,7 +143,7 @@ const LibrarySection = () => {
             <div>
               <h4 className="font-semibold text-foreground">Search in any language</h4>
               <p className="text-sm text-muted-foreground">
-                Type in বাংলা or English — find any book instantly. Our library understands you.
+                Type in English, বাংলা, or any language — find any book instantly. The library understands you.
               </p>
             </div>
           </div>

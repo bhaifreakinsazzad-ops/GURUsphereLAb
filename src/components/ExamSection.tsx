@@ -4,11 +4,11 @@ import { Trophy, Award, BarChart3, FileCheck2, ChevronRight } from "lucide-react
 import { Link } from "react-router-dom";
 
 const leaderboard = [
-  { rank: 1, name: "Rafiq Hasan", score: 2847, badge: "🥇" },
-  { rank: 2, name: "Ayesha Siddiqua", score: 2631, badge: "🥈" },
-  { rank: 3, name: "Nusrat Jahan", score: 2510, badge: "🥉" },
-  { rank: 4, name: "Karim Uddin", score: 2398, badge: "" },
-  { rank: 5, name: "Fatima Begum", score: 2245, badge: "" },
+  { rank: 1, name: "Alex Chen", score: 2847, badge: "🥇" },
+  { rank: 2, name: "Priya Sharma", score: 2631, badge: "🥈" },
+  { rank: 3, name: "Jordan Rivera", score: 2510, badge: "🥉" },
+  { rank: 4, name: "Rafiq Hasan", score: 2398, badge: "" },
+  { rank: 5, name: "Emily Park", score: 2245, badge: "" },
 ];
 
 const ExamSection = () => {
@@ -32,7 +32,7 @@ const ExamSection = () => {
               <span className="text-gradient-green">Earn it.</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
-              Take exams live or anytime. Get ranked globally, earn certificates, 
+              Challenge yourself anytime. Get ranked globally, earn certificates,
               and watch yourself climb the Knowledge Tree.
             </p>
           </div>

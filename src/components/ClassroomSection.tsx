@@ -25,8 +25,8 @@ const ClassroomSection = () => {
               <span className="text-gradient-green">A universe.</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
-              Enter live sessions where subjects orbit around you like planets. 
-              Pick any world to join — real teachers, real-time, real magic.
+              Enter live sessions where subjects orbit around you like planets.
+              Pick any world to join — real instructors, real-time interaction, real breakthroughs.
             </p>
           </div>
         </ScrollReveal>

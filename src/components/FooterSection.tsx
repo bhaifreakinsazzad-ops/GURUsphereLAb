@@ -10,12 +10,12 @@ const FooterSection = () => {
     e.preventDefault();
     const trimmed = email.trim();
     if (!trimmed || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
-      toast({ title: "অবৈধ ইমেইল", description: "দয়া করে একটি সঠিক ইমেইল দিন।", variant: "destructive" });
+      toast({ title: "Invalid email", description: "Please enter a valid email address.", variant: "destructive" });
       return;
     }
     setSubmitting(true);
     setTimeout(() => {
-      toast({ title: "ধন্যবাদ! 🎉", description: "আপনাকে শীঘ্রই জানানো হবে।" });
+      toast({ title: "You're in! 🎉", description: "We'll notify you when we launch." });
       setEmail("");
       setSubmitting(false);
     }, 600);
@@ -37,8 +37,8 @@ const FooterSection = () => {
             Your seat is waiting.
           </h2>
           <p className="text-lg mb-10 max-w-lg mx-auto leading-relaxed" style={{ color: "hsl(162 30% 65%)" }}>
-            Join thousands of learners from Bangladesh and beyond. 
-            No fees. No barriers. Just knowledge, freely given.
+            Join thousands of curious learners worldwide.
+            No fees. No barriers. No catch. Just knowledge, freely given.
           </p>
 
           <form onSubmit={handleJoin} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
@@ -71,7 +71,7 @@ const FooterSection = () => {
               <span className="text-xs" style={{ color: "hsl(162 20% 45%)" }}>LAB</span>
             </div>
             <p className="text-xs" style={{ color: "hsl(162 15% 40%)" }}>
-              Made with ❤️ in Bangladesh, for the world.
+              Born in Bangladesh, built for the curious everywhere.
             </p>
           </div>
         </ScrollReveal>
