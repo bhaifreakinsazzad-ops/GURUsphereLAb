@@ -10,7 +10,7 @@ const FooterSection = () => {
     e.preventDefault();
     const trimmed = email.trim();
     if (!trimmed || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
-      toast({ title: "অবৈধ ইমেইল", description: "দয়া করে একটি সঠিক ইমেইল দিন।", variant: "destructive" });
+      toast({ title: "Invalid email", description: "Please enter a valid email address.", variant: "destructive" });
       return;
     }
     setSubmitting(true);
