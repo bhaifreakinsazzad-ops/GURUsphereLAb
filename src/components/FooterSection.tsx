@@ -37,8 +37,8 @@ const FooterSection = () => {
             Your seat is waiting.
           </h2>
           <p className="text-lg mb-10 max-w-lg mx-auto leading-relaxed" style={{ color: "hsl(162 30% 65%)" }}>
-            Join thousands of learners from Bangladesh and beyond. 
-            No fees. No barriers. Just knowledge, freely given.
+            Join thousands of curious learners worldwide.
+            No fees. No barriers. No catch. Just knowledge, freely given.
           </p>
 
           <form onSubmit={handleJoin} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
