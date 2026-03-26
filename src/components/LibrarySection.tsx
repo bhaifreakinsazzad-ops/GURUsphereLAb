@@ -35,8 +35,8 @@ const LibrarySection = () => {
               <span className="text-gradient-gold">breathe.</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
-              Every book is alive here — listen, read, annotate, and discuss. 
-              Our library grows with you. Infinite shelves, zero cost.
+              Every book is alive here — listen, read, annotate, and discuss.
+              Your library grows with you. Infinite shelves, zero cost, zero ads.
             </p>
           </div>
         </ScrollReveal>
