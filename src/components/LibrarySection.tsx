@@ -143,7 +143,7 @@ const LibrarySection = () => {
             <div>
               <h4 className="font-semibold text-foreground">Search in any language</h4>
               <p className="text-sm text-muted-foreground">
-                Type in বাংলা or English — find any book instantly. Our library understands you.
+                Type in English, বাংলা, or any language — find any book instantly. The library understands you.
               </p>
             </div>
           </div>

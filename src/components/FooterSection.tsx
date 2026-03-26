@@ -71,7 +71,7 @@ const FooterSection = () => {
               <span className="text-xs" style={{ color: "hsl(162 20% 45%)" }}>LAB</span>
             </div>
             <p className="text-xs" style={{ color: "hsl(162 15% 40%)" }}>
-              Made with ❤️ in Bangladesh, for the world.
+              Born in Bangladesh, built for the curious everywhere.
             </p>
           </div>
         </ScrollReveal>

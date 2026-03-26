@@ -32,7 +32,7 @@ const ExamSection = () => {
               <span className="text-gradient-green">Earn it.</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
-              Take exams live or anytime. Get ranked globally, earn certificates, 
+              Challenge yourself anytime. Get ranked globally, earn certificates,
               and watch yourself climb the Knowledge Tree.
             </p>
           </div>

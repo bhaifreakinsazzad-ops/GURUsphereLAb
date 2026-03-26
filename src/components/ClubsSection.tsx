@@ -31,8 +31,8 @@ const ClubsSection = () => {
               <span className="text-gradient-green">tribe.</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
-              Clubs are where passion meets community. Join a space that 
-              fuels what you love — launching soon.
+              Clubs are where passion meets community. Find people who geek out
+              about the same things you do — launching soon.
             </p>
           </div>
         </ScrollReveal>

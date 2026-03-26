@@ -13,7 +13,7 @@ const features = [
     icon: Users2,
     title: "Peer Circle",
     bengali: "সহপাঠী বৃত্ত",
-    description: "Get matched with 4 learners at your level. Study together, challenge each other, grow as a unit. Your circle becomes your strength.",
+    description: "Get matched with 4 learners at your level from anywhere in the world. Study together, challenge each other, grow as a unit.",
     color: "hsl(var(--pathshala-green))",
   },
   {

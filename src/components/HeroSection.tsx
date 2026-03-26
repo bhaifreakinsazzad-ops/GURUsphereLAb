@@ -111,8 +111,8 @@ const HeroSection = () => {
         >
           {[
             { value: "100%", label: "Forever Free" },
-            { value: "∞", label: "Books Available" },
-            { value: "Live", label: "Classrooms" },
+            { value: "∞", label: "Books & Resources" },
+            { value: "24/7", label: "Live Classrooms" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-gradient-gold">{stat.value}</div>
